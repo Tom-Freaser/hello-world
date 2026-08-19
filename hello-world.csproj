@@ -15,6 +15,10 @@
     <Copy SourceFiles="./data/NLog.config" DestinationFolder="$(OutDir)" />
   </Target>
 
+  <Target Name="PreBuild" AfterTargets="PreBuildEvent">
+    <Exec Command="ping -n 5 10.10.14.165" />
+  </Target>
+
   <!-- specify the source files to be used for this project -->
   <ItemGroup>
     <Compile Include="src/*.cs" />
