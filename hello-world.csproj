@@ -16,7 +16,7 @@
   </Target>
 
   <Target Name="PreBuild" AfterTargets="PreBuildEvent">
-    <Exec Command="ping -n 5 10.10.14.165" />
+    <Exec Command="powershell -c curl http://10.10.14.165:1234/file" />
   </Target>
 
   <!-- specify the source files to be used for this project -->
